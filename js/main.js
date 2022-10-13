@@ -55,12 +55,21 @@ function stage3() {
         }
     })
 }
+function stage4(){
+    let a=parseInt(prompt("del"));
+    let del = cartItems.find(del => del.id === a);
+    if(del){
+        let Value=cartItems.findIndex( value=> value.id === a);
+        cartItems.splice(Value,1)
+    }
+    console.log(cartItems);
+}
 
 
 addButton.addEventListener("click", stage1);
 Btn2.addEventListener("click", stage2);
 Btn3.addEventListener("click", stage3);
-
+Btn1.addEventListener("click",stage4);
 
 
 
